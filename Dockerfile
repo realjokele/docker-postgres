@@ -1,7 +1,10 @@
 FROM postgres:17-alpine
 
 RUN apk add --no-cache icu-libs
-RUN echo "timezone = 'UTC'" >> /usr/local/share/postgresql/postgresql.conf.sample
+
+# set Alpine timezone
+ENV TZ=UTC
+RUN cp /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 ENV LANG=de_DE.UTF-8
 ENV LANGUAGE=de_DE:de
