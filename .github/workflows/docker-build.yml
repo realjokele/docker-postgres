@@ -36,5 +36,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/node-dev-container:latest
+          tags: ghcr.io/${{ github.repository_owner }}/docker-postgres:latest
 
