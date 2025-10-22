@@ -1,6 +1,6 @@
 FROM postgres:17-alpine
 
-RUN apk add --no-cache icu-libs
+RUN apk add --no-cache tzdata icu-libs
 
 # set Alpine timezone
 ENV TZ=UTC
