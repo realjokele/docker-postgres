@@ -1,11 +1,11 @@
-FROM postgres:17
+FROM postgres:17-alpine
 
-RUN apt-get update && apt-get install -y locales tzdata \
- && sed -i '/de_DE.UTF-8/s/^# //g' /etc/locale.gen \
- && locale-gen \
- && dpkg-reconfigure -f noninteractive tzdata
+RUN apk add --no-cache icu-libs
 
 ENV LANG=de_DE.UTF-8
 ENV LANGUAGE=de_DE:de
 ENV LC_ALL=de_DE.UTF-8
+ENV TZ=UTC
 
+# ADD /scripts/ /opt/scripts/
+# RUN chmod -R 770 /opt/scripts/
