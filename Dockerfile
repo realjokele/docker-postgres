@@ -11,8 +11,9 @@ ENV LANGUAGE=de_DE:de
 ENV LC_ALL=de_DE.UTF-8
 ENV TZ=UTC
 
-# This variable is read by the Postgres Docker entrypoint when initializing a new database cluster.
-# So the its value is passed directly to initdb when the database is created for the first time.
+# POSTGRES_INITDB_ARGS
+#    This variable is read by the Postgres Docker entrypoint when initializing a new database cluster.
+#    So the its value is passed directly to initdb when the database is created for the first time.
 # --locale-provider=icu
 #   Using ICU lets Postgres support more locales, Unicode-aware sorting, and proper case conversion 
 #   for languages like German (de-DE).
