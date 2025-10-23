@@ -22,6 +22,8 @@ ENV TZ=UTC
 ENV POSTGRES_INITDB_ARGS="--locale-provider=icu --icu-locale=de-DE"
 
 # Copy SQL init script
+# The official image will automatically run any .sql or .sh files in /docker-entrypoint-initdb.d/ 
+# when initializing a new database (first start).
 COPY ./scripts/00-init.sql /docker-entrypoint-initdb.d/
 
 # ADD /scripts/ /opt/scripts/
