@@ -1,7 +1,8 @@
+  GNU nano 8.4                                   /boot/config/plugins/dockerMan/templates-user/my-docker-postgres-17.xml                                              
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>docker-postgres</Name>
-  <Repository>ghcr.io/realjokele/docker-postgres:latest</Repository>
+  <Name>docker-postgres-17</Name>
+  <Repository>ghcr.io/realjokele/docker-postgres-17:latest</Repository>
   <Registry/>
   <Network>bridge</Network>
   <MyIP/>
@@ -23,7 +24,7 @@
   <Requires/>
   <Config Name="POSTGRES_PASSWORD" Target="POSTGRES_PASSWORD" Default="" Mode="" Description="Initial superuser password (required)" Type="Variable" Display="always">
   <Config Name="POSTGRES_USER" Target="POSTGRES_USER" Default="postgres" Mode="" Description="Initial superuser name (default: postgres)" Type="Variable" Display="al>
-  <Config Name="Database Storage Path" Target="/var/lib/postgresql/data" Default="/mnt/cache/appdata/postgresql17" Mode="rw" Description="" Type="Path" Display="alwa>
+  <Config Name="Database Storage Path" Target="/var/lib/postgresql/data" Default="/mnt/cache/appdata/postgresql-17" Mode="rw" Description="" Type="Path" Display="alw>
   <Config Name="PostgreSQL access port" Target="5432" Default="5432" Mode="tcp" Description="PostgreSQL access port (default: 5432)" Type="Port" Display="always" Req>
   <TailscaleStateDir/>
 </Container>
